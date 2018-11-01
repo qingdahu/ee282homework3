@@ -4,27 +4,16 @@ Homework 3 for EE282 class (Qingda Hu)
 
 ```
 wget ftp://ftp.flybase.net:21/genomes/Drosophila_melanogaster/current/fasta/dmel-all-chromosome-r6.24.fasta.gz
-
 wget ftp://ftp.flybase.net:21/genomes/Drosophila_melanogaster/current/fasta/md5sum.txt
-
 md5sum dmel-all-chromosome-r6.24.fasta.gz
-
 md5sum -c md5sum.txt 
-
 zgrep '^[AGCTN]' dmel-all-chromosome-r6.24.fasta.gz | wc -m
-
 zgrep '^[AGCTN]' dmel-all-chromosome-r6.24.fasta.gz |tr -cd 'N'|wc -m 
-
 zgrep '^>' dmel-all-chromosome-r6.24.fasta.gz | wc -l
-
 wget ftp://ftp.flybase.org:21/genomes/dmel/current/gtf/dmel-all-r6.24.gtf.gz
-
 wget ftp://ftp.flybase.org:21/genomes/dmel/current/gtf/md5sum.txt
-
 md5sum -c md5sum.txt.1
-
 zcat dmel-all-r6.24.gtf.gz | gawk -F '\t' '{print $3}'  | sort | uniq -c |sort -nr
-
 zcat dmel-all-r6.24.gtf.gz | gawk -F '\t' '$3 == "gene" {print $1}'  | sort | uniq -c |sort -nr
 ```
 
@@ -91,12 +80,9 @@ Similar to above.
 
 ```
 wget  ftp://ftp.flybase.org/genomes/dmel/current/gtf/
-
 wget ftp://ftp.flybase.org:21/genomes/dmel/current/gtf/dmel-all-r6.24.gtf.gz
-
 wget ftp://ftp.flybase.org:21/genomes/dmel/current/gtf/md5sum.txt
-
- md5sum -c md5sum.txt.1 
+md5sum -c md5sum.txt.1 
 ```
 
 ### Print a summary report with the following information:
