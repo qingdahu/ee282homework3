@@ -1,4 +1,4 @@
-### ee282homework3
+# ee282homework3
 Homework 3 for EE282 class (Qingda Hu)
 
 `wget ftp://ftp.flybase.net/releases/FB2018_05/
@@ -14,7 +14,7 @@ zgrep '^>' dmel-all-chromosome-r6.24.fasta.gz | wc -l
 
 
 ##Summarize a genome assembly
-# Pull the most current Drosophila genome from flybase
+### Pull the most current Drosophila genome from flybase
 
 `wget ftp://ftp.flybase.net/releases/FB2018_05/`
 to get the list of files in that directory. From this file we can find the link for the files we want.
@@ -22,7 +22,7 @@ to get the list of files in that directory. From this file we can find the link 
 Since we just want the genome:
 `wget ftp://ftp.flybase.net:21/genomes/Drosophila_melanogaster/current/fasta/dmel-all-chromosome-r6.24.fasta.gz`
 
-#File integrity
+###File integrity
 
 Since we need to check MD5 sum, we will need to get the MD5sums:
 `wget ftp://ftp.flybase.net:21/genomes/Drosophila_melanogaster/current/fasta/md5sum.txt`
@@ -34,7 +34,7 @@ Running md5sum on the dowloaded gives 71a25289ae2e630d5247856dc2a67ab1.
 Alternatively I can automatically check the MD5sum but since I didn't download all the files, I have to search for the 'OK'. I tried to pipe md5sum -c into grep but it didn't work. 
 ` md5sum -c md5sum.txt  `
 
-#Calculate the following for the whole genome:
+###Calculate the following for the whole genome:
 
 1. Total number of nucleotides
 
