@@ -95,22 +95,22 @@ Remove all lines that are sequence, label, or with #. Take the 3rd column and co
 
 |  count | type  |
 |---|---|
- |187315 exon|
- |161014 CDS|
- |46339 5UTR|
- |33358 3UTR|
- |30591 start_codon|
- |30533 stop_codon|
- |30507 mRNA|
- |17772 gene|
- |2961 ncRNA|
- |485 miRNA|
- |334 pseudogene|
- |312 tRNA|
- |299 snoRNA|
- |262 pre_miRNA|
- |115 rRNA|
- |32 snRNA|
+ |187315| exon|
+ |161014| CDS|
+ |46339| 5UTR|
+ |33358| 3UTR|
+ |30591| start_codon|
+ |30533| stop_codon|
+ |30507| mRNA|
+ |17772| gene|
+ |2961| ncRNA|
+ |485| miRNA|
+ |334| pseudogene|
+ |312| tRNA|
+ |299| snoRNA|
+ |262| pre_miRNA|
+ |115| rRNA|
+ |32| snRNA|
       
 2. Total number of genes per chromosome arm (X, Y, 2L, 2R, 3L, 3R, 4)
 
