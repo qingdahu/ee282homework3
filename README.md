@@ -89,7 +89,7 @@ md5sum -c md5sum.txt.1
 
 1. Total number of features of each type, sorted from the most common to the least common
 
-Remove all lines that are sequence, label, or with #. Take the 3rd column and count unique elements. 
+Column 3 has the type information so that column was isolated with gawk. Counting was done with uniq but the data has to be sorted first. The output is sorted from the most common to the least.  
 
 ` zcat dmel-all-r6.24.gtf.gz | gawk -F '\t' '{print $3}'  | sort | uniq -c |sort -nr`
 
@@ -114,8 +114,9 @@ Remove all lines that are sequence, label, or with #. Take the 3rd column and co
       
 2. Total number of genes per chromosome arm (X, Y, 2L, 2R, 3L, 3R, 4)
 
-`zcat dmel-all-r6.24.gtf.gz | gawk -F '\t' '$3 == "gene" {print $1}'  | sort | uniq -c |sort -nr`
+All genes were isolated by taking the chromsome location which is in column 1 if gene is found in the third column. Counting is similar to above. 
 
+`zcat dmel-all-r6.24.gtf.gz | gawk -F '\t' '$3 == "gene" {print $1}'  | sort | uniq -c |sort -nr`
 
 |  count | chromosome/scaffold  |
 |---|---|
