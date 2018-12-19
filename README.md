@@ -56,6 +56,8 @@ Since fasta is formatted with labels starting with '>' and sequences starting wi
 
 The number of nucleotides is 145523498.
 
+### Hi this is the wrong value. you are off by 38,110 and I have no idea why... I tried figuring it out but it just took too long. I suggest using a different method or using faSize.
+
 2. Total number of Ns
 
 To count the number of Ns, I can trim all the characters other than N with tr. This is likely not the most effecient way to do this. 
